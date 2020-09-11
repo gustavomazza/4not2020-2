@@ -4,12 +4,12 @@ const esquema = mongoose.Schema({
     nome: {
         type: String,
         required: true
-    }
+    },
 
     ementa: {
         type: String,
         required: true
-    }
+    },
 
     carga_horaria: {
         type: Number,
@@ -17,13 +17,13 @@ const esquema = mongoose.Schema({
         min: 4,
         max: 80
         //se na hora de cadastrar a carga horária colocar um valor menos que 4 ou maior que 80 ele não deixará
-    }
+    },
 
     nivel: {
         type: String,
         required: true,
         enum: ['Básico', 'Intermediário', 'Avançado']
-    }
+    },
 
     valor_curso: {
         type: Number,
