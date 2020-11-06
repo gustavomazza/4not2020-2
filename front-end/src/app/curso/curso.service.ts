@@ -1,5 +1,5 @@
-import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
+import { environment } from './../../environments/environment' //verificar se aqui tem que ter virgula no final, no do fausto não tinha
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -12,6 +12,6 @@ export class CursoService {
   constructor(private http: HttpClient) {}
 
   listar() {
-      return this.http.get(this.apiServer + 'curso')
+      return this.http.get(this.apiServer + 'curso').toPromise()
   }
 }
